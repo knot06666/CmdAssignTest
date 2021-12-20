@@ -3,8 +3,8 @@ global.cors = require('cors');
 global.bodyParser = require('body-parser');
 global.Sequelize = require('sequelize');
 console.log(process.env)
-// global.sequelize = new Sequelize(`postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${process.env.POSTGRES_HOST}:5432/${process.env.POSTGRES_DB}`);
-global.sequelize = new Sequelize(`postgres://postgres:@Jirayu21@127.0.0.1:5432/school_cmd`);
+global.sequelize = new Sequelize(`postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${process.env.POSTGRES_HOST}:5432/${process.env.POSTGRES_DB}`);
+// global.sequelize = new Sequelize(`postgres://postgres:@Jirayu21@127.0.0.1:5432/school_cmd`);
 // global.sequelize = new Sequelize('school_cmd', 'postgres', 'cmdTest', {
 //     host: 'localhost',
 //     port: '35432',
