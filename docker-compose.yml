@@ -1,0 +1,36 @@
+version: "3"
+services:
+  node_backend:
+    container_name: node_backend
+    image: node-test:0.0.1
+    build:
+      context: .
+    depends_on:
+      - db
+    environment:
+      NODE_ENV: development
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: cmdTest
+      POSTGRES_DB: school_cmd
+      POSTGRES_HOST: db
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app/
+      - /app/node_modules
+
+  db:
+    container_name: db
+    image: postgres:11.14-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: cmdTest
+      POSTGRES_DB: school_cmd
+    volumes:
+      - pgdata1:/var/lib/postgresql/data
+
+volumes:
+  pgdata1: {}

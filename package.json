@@ -1,0 +1,28 @@
+{
+  "name": "cmdassigntest",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "migrate": "node ./configs/migrate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knot06666/CmdAssignTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knot06666/CmdAssignTest/issues"
+  },
+  "homepage": "https://github.com/knot06666/CmdAssignTest#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "sequelize": "^5.22.4"
+  }
+}
